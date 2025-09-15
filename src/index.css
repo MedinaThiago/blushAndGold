@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Editorial Luxo Design System - Saint Laurent inspired */
+/* All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --deep-black: 0 0% 5%;
+    --off-white: 30 12% 97%;
+    --blush-beige: 15 20% 88%;
+    --gold-accent: 45 85% 65%;
+    
+    /* Semantic Tokens */
+    --background: var(--off-white);
+    --foreground: var(--deep-black);
+
+    --card: var(--off-white);
+    --card-foreground: var(--deep-black);
+
+    --popover: var(--off-white);
+    --popover-foreground: var(--deep-black);
+
+    --primary: var(--deep-black);
+    --primary-foreground: var(--off-white);
+
+    --secondary: var(--blush-beige);
+    --secondary-foreground: var(--deep-black);
+
+    --muted: var(--blush-beige);
+    --muted-foreground: 0 0% 45%;
+
+    --accent: var(--gold-accent);
+    --accent-foreground: var(--deep-black);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--off-white);
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: var(--gold-accent);
+
+    --radius: 0rem;
+    
+    /* Typography */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+    
+    /* Gradients */
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--deep-black)) 0%, hsl(0 0% 15%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--off-white)) 0%, hsl(var(--blush-beige)) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 20px 60px -20px hsl(var(--deep-black) / 0.15);
+    --shadow-gold: 0 0 40px hsl(var(--gold-accent) / 0.3);
+    
+    /* Animations */
+    --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: var(--deep-black);
+    --foreground: var(--off-white);
+
+    --card: var(--deep-black);
+    --card-foreground: var(--off-white);
+
+    --popover: var(--deep-black);
+    --popover-foreground: var(--off-white);
+
+    --primary: var(--off-white);
+    --primary-foreground: var(--deep-black);
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: var(--off-white);
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: var(--gold-accent);
+    --accent-foreground: var(--deep-black);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: var(--off-white);
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: var(--gold-accent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .serif {
+    font-family: var(--font-serif);
+  }
+
+  .sans {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .luxury-line {
+    @apply relative;
+  }
+  
+  .luxury-line::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2;
+    @apply w-12 h-px bg-accent;
+  }
+
+  .hero-text {
+    @apply text-4xl md:text-6xl lg:text-7xl;
+    @apply font-light tracking-tight leading-tight;
+    @apply serif;
+  }
+
+  .elegant-fade {
+    animation: elegant-fade-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .luxury-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .luxury-hover:hover {
+    @apply transform scale-105;
+    box-shadow: var(--shadow-elegant);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes elegant-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
