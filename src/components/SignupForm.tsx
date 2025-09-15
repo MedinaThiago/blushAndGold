@@ -2,28 +2,31 @@ import { useState } from "react";
 import { LuxuryButton } from "./LuxuryButton";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
+    const whatsappNumber = "5531991911609";
+    const messageParts = [
+      "Olá! Gostaria de reservar meu acesso exclusivo.",
+    ];
 
-    // Simulate API call
-    setTimeout(() => {
-      toast({
-        title: "Cadastro realizado com sucesso!",
-        description: "Você receberá um email com instruções para acesso exclusivo.",
-      });
-      setEmail("");
-      setName("");
-      setIsLoading(false);
-    }, 1000);
+    if (name.trim()) {
+      messageParts.push(`Meu nome é ${name.trim()}.`);
+    }
+
+    if (email.trim()) {
+      messageParts.push(`Meu email é ${email.trim()}.`);
+    }
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      messageParts.join(" ")
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -71,13 +74,8 @@ const SignupForm = () => {
             </div>
 
             <div className="pt-4">
-              <LuxuryButton
-                type="submit"
-                disabled={isLoading}
-                className="w-full"
-                size="lg"
-              >
-                {isLoading ? "Cadastrando..." : "Garantir Acesso Exclusivo"}
+              <LuxuryButton type="submit" className="w-full" size="lg">
+                Garantir Acesso Exclusivo
               </LuxuryButton>
             </div>
 
