@@ -2,45 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Editorial Luxo Design System - Saint Laurent inspired */
+/* Editorial Luxo Design System - Wardrobe inspired */
 /* All colors MUST be HSL */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --deep-black: 0 0% 5%;
-    --off-white: 30 12% 97%;
-    --blush-beige: 15 20% 88%;
-    --gold-accent: 45 85% 65%;
-    
+    /* Core Palette - inspired by the attached wardrobe */
+    --noir-silk: 0 0% 8%;
+    --charcoal-pinstripe: 214 10% 26%;
+    --espresso-suede: 23 28% 28%;
+    --olive-sheen: 88 24% 42%;
+    --peach-rose: 22 52% 78%;
+    --champagne-cream: 38 45% 94%;
+
     /* Semantic Tokens */
-    --background: var(--off-white);
-    --foreground: var(--deep-black);
+    --background: var(--champagne-cream);
+    --foreground: var(--noir-silk);
 
-    --card: var(--off-white);
-    --card-foreground: var(--deep-black);
+    --card: var(--champagne-cream);
+    --card-foreground: var(--noir-silk);
 
-    --popover: var(--off-white);
-    --popover-foreground: var(--deep-black);
+    --popover: var(--champagne-cream);
+    --popover-foreground: var(--noir-silk);
 
-    --primary: var(--deep-black);
-    --primary-foreground: var(--off-white);
+    --primary: var(--noir-silk);
+    --primary-foreground: var(--champagne-cream);
 
-    --secondary: var(--blush-beige);
-    --secondary-foreground: var(--deep-black);
+    --secondary: var(--peach-rose);
+    --secondary-foreground: var(--noir-silk);
 
-    --muted: var(--blush-beige);
-    --muted-foreground: 0 0% 45%;
+    --muted: var(--peach-rose);
+    --muted-foreground: var(--charcoal-pinstripe);
 
-    --accent: var(--gold-accent);
-    --accent-foreground: var(--deep-black);
+    --accent: var(--olive-sheen);
+    --accent-foreground: var(--champagne-cream);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: var(--off-white);
+    --destructive: 8 68% 48%;
+    --destructive-foreground: var(--champagne-cream);
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: var(--gold-accent);
+    --border: 32 30% 82%;
+    --input: 32 30% 82%;
+    --ring: var(--olive-sheen);
 
     --radius: 0rem;
     
@@ -49,61 +51,61 @@
     --font-sans: 'Inter', sans-serif;
     
     /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(var(--deep-black)) 0%, hsl(0 0% 15%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--off-white)) 0%, hsl(var(--blush-beige)) 100%);
-    
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--noir-silk)) 0%, hsl(var(--charcoal-pinstripe)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--champagne-cream)) 0%, hsl(var(--peach-rose)) 100%);
+
     /* Shadows */
-    --shadow-elegant: 0 20px 60px -20px hsl(var(--deep-black) / 0.15);
-    --shadow-gold: 0 0 40px hsl(var(--gold-accent) / 0.3);
+    --shadow-elegant: 0 24px 60px -24px hsl(var(--noir-silk) / 0.24);
+    --shadow-luster: 0 0 40px hsl(var(--olive-sheen) / 0.35);
     
     /* Animations */
     --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 38 45% 94%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 0 0% 10%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 23 28% 28%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 38 45% 94%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 22 52% 78%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 10%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 32 30% 82%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 88 24% 42%;
   }
 
   .dark {
-    --background: var(--deep-black);
-    --foreground: var(--off-white);
+    --background: var(--noir-silk);
+    --foreground: var(--champagne-cream);
 
-    --card: var(--deep-black);
-    --card-foreground: var(--off-white);
+    --card: var(--noir-silk);
+    --card-foreground: var(--champagne-cream);
 
-    --popover: var(--deep-black);
-    --popover-foreground: var(--off-white);
+    --popover: var(--noir-silk);
+    --popover-foreground: var(--champagne-cream);
 
-    --primary: var(--off-white);
-    --primary-foreground: var(--deep-black);
+    --primary: var(--champagne-cream);
+    --primary-foreground: var(--noir-silk);
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: var(--off-white);
+    --secondary: var(--espresso-suede);
+    --secondary-foreground: var(--champagne-cream);
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: var(--charcoal-pinstripe);
+    --muted-foreground: var(--peach-rose);
 
-    --accent: var(--gold-accent);
-    --accent-foreground: var(--deep-black);
+    --accent: var(--olive-sheen);
+    --accent-foreground: var(--champagne-cream);
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: var(--off-white);
+    --destructive: 8 62% 38%;
+    --destructive-foreground: var(--champagne-cream);
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: var(--gold-accent);
+    --border: var(--charcoal-pinstripe);
+    --input: var(--charcoal-pinstripe);
+    --ring: var(--olive-sheen);
   }
 }
 

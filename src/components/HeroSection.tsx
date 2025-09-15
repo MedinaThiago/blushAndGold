@@ -52,9 +52,9 @@ const HeroSection = () => {
               />
 
               {/* Subtle overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-black/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-noir-silk/10 to-transparent pointer-events-none" />
 
-              {/* Decorative gold line */}
+              {/* Decorative accent line */}
               <div className="absolute bottom-8 left-8 w-16 h-px bg-accent" />
             </div>
           </div>

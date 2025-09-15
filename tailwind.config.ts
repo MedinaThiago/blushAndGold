@@ -14,10 +14,12 @@ export default {
     },
     extend: {
       colors: {
-        'deep-black': 'hsl(var(--deep-black))',
-        'off-white': 'hsl(var(--off-white))',
-        'blush-beige': 'hsl(var(--blush-beige))',
-        'gold-accent': 'hsl(var(--gold-accent))',
+        'noir-silk': 'hsl(var(--noir-silk))',
+        'champagne-cream': 'hsl(var(--champagne-cream))',
+        'peach-rose': 'hsl(var(--peach-rose))',
+        'olive-sheen': 'hsl(var(--olive-sheen))',
+        'espresso-suede': 'hsl(var(--espresso-suede))',
+        'charcoal-pinstripe': 'hsl(var(--charcoal-pinstripe))',
         
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -63,7 +65,7 @@ export default {
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
-        'gold': 'var(--shadow-gold)',
+        'luster': 'var(--shadow-luster)',
       },
       borderRadius: {
         lg: "var(--radius)",
