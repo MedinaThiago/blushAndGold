@@ -1,5 +1,5 @@
 import { LuxuryButton } from "./LuxuryButton";
-import heroPortrait from "@/assets/hero-portrait.jpg";
+import heroPortrait from "@/assets/InitialPageIMG.jpg";
 
 const HeroSection = () => {
   return (
@@ -21,31 +21,23 @@ const HeroSection = () => {
 
             <div className="mb-8 max-w-lg mx-auto lg:mx-0">
               <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                Seja o primeiro a conhecer nossa mais nova coleção. 
-                Uma seleção exclusiva que combina sofisticação atemporal 
+                Seja o primeiro a conhecer nossa mais nova coleção.
+                Uma seleção exclusiva que combina sofisticação atemporal
                 com o contemporâneo.
               </p>
-              
+
               <div className="space-y-3 text-sm font-light text-muted-foreground">
                 <p>✦ Acesso 48h antes do lançamento oficial</p>
                 <p>✦ Peças em edição limitada</p>
-                <p>✦ Desconto exclusivo de 15% na primeira compra</p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <LuxuryButton variant="primary" size="lg">
-                  Cadastrar Acesso
-                </LuxuryButton>
                 <LuxuryButton variant="outline" size="lg">
                   Saiba Mais
                 </LuxuryButton>
               </div>
-              
-              <p className="text-xs font-light text-muted-foreground">
-                * Vagas limitadas. Apenas 100 convites disponíveis.
-              </p>
             </div>
           </div>
 
@@ -58,10 +50,10 @@ const HeroSection = () => {
                 className="w-full h-auto object-cover luxury-hover"
                 style={{ aspectRatio: "4/5" }}
               />
-              
+
               {/* Subtle overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-deep-black/10 to-transparent pointer-events-none" />
-              
+
               {/* Decorative gold line */}
               <div className="absolute bottom-8 left-8 w-16 h-px bg-accent" />
             </div>

@@ -11,7 +11,7 @@ const Footer = () => {
               Editorial Luxo
             </h3>
             <p className="text-sm font-light leading-relaxed text-off-white/80 mb-6">
-              Criamos peças atemporais que transcendem tendências. 
+              Criamos peças atemporais que transcendem tendências.
               Cada coleção é uma celebração da elegância contemporânea.
             </p>
             <div className="flex space-x-4">
@@ -38,11 +38,6 @@ const Footer = () => {
               <li>
                 <a href="#" className="hover:text-gold-accent transition-colors">
                   Editorial
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gold-accent transition-colors">
-                  Sobre Nós
                 </a>
               </li>
               <li>
