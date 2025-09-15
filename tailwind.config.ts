@@ -16,8 +16,9 @@ export default {
       colors: {
         'deep-black': 'hsl(var(--deep-black))',
         'off-white': 'hsl(var(--off-white))',
-        'blush-beige': 'hsl(var(--blush-beige))',
-        'gold-accent': 'hsl(var(--gold-accent))',
+        'espresso-brown': 'hsl(var(--espresso-brown))',
+        'peach-silk': 'hsl(var(--peach-silk))',
+        'olive-satin': 'hsl(var(--olive-satin))',
         
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -63,7 +64,7 @@ export default {
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
-        'gold': 'var(--shadow-gold)',
+        'olive': 'var(--shadow-olive)',
       },
       borderRadius: {
         lg: "var(--radius)",
