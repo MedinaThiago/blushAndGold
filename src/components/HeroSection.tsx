@@ -1,5 +1,4 @@
-import { LuxuryButton } from "./LuxuryButton";
-import heroPortrait from "@/assets/InitialPageIMG.jpg";
+import video from "@/assets/video_camisa_preta.mp4";
 
 const HeroSection = () => {
   return (
@@ -9,53 +8,46 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-center lg:text-left elegant-fade">
             <div className="mb-6">
-              <p className="text-sm font-light tracking-[0.2em] uppercase text-muted-foreground mb-2">
-                Coleção Exclusiva
-              </p>
               <div className="luxury-line">
                 <h1 className="hero-text mb-6 text-balance">
-                  Acesso Antecipado
+                  A Essência da Minha Primeira Coleção Cápsula
                 </h1>
               </div>
             </div>
 
             <div className="mb-8 max-w-lg mx-auto lg:mx-0">
               <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                Seja o primeiro a conhecer nossa mais nova coleção.
-                Uma seleção exclusiva que combina sofisticação atemporal
-                com o contemporâneo.
+                Sempre acreditei que a moda é mais do que vestir: é identidade, expressão e presença. Dessa visão nasceu meu desejo de criar algo verdadeiramente autoral peças que traduzem poesia, delicadeza e elegância em cada detalhe.
               </p>
 
-              <div className="space-y-3 text-sm font-light text-muted-foreground">
-                <p>✦ Acesso 48h antes do lançamento oficial</p>
-                <p>✦ Peças em edição limitada</p>
-              </div>
-            </div>
+              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
+                Assim surgiu minha primeira coleção cápsula. Camisas em tecidos acetinados, que revelam movimento e luxo em cada gesto, foram o ponto de partida dessa criação.
+              </p>
 
-            <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <LuxuryButton variant="outline" size="lg">
-                  Saiba Mais
-                </LuxuryButton>
-              </div>
+              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
+                Escolhi as camisas porque carregam uma força atemporal: clássicas e versáteis, transitam entre o feminino e o masculino, tornando-se peças genderless. Produzidas em número limitado, são exclusivas, reinterpretadas com fluidez e contemporaneidade.
+              </p>
+
+              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
+                Cada criação é um reflexo da minha visão: moda como arte, manifesto e celebração da individualidade.
+              </p>
             </div>
           </div>
 
-          {/* Image */}
           <div className="relative elegant-fade">
             <div className="relative overflow-hidden">
-              <img
-                src={heroPortrait}
-                alt="Modelo vestindo peça da coleção exclusiva"
-                className="w-full h-auto object-cover luxury-hover"
-                style={{ aspectRatio: "4/5" }}
+              <video
+                src={video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto object-cover luxury-hover max-w-[360px] lg:max-w-[480px] mx-auto"
+                style={{ aspectRatio: "3/5" }}
               />
 
               {/* Subtle overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-noir-silk/10 to-transparent pointer-events-none" />
-
-              {/* Decorative accent line */}
-              <div className="absolute bottom-8 left-8 w-16 h-px bg-accent" />
             </div>
           </div>
         </div>

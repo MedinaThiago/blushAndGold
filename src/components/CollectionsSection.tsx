@@ -1,44 +1,67 @@
 import { LuxuryButton } from "./LuxuryButton";
-import lookEditorial from "@/assets/InitialPageIMG.jpg";
-import lookTailored from "@/assets/hero-portrait.jpg";
+import noirPortrait from "@/assets/camisa_preta.jpg";
+import espressoPortrait from "@/assets/camisa_marrom.jpg";
+import oliveWalk from "@/assets/camisa_verde.jpg";
+import peachPortrait from "@/assets/camisa_rosa.jpg";
+import oliveDetail from "@/assets/camisa_verde_zoom.jpg";
 
 const collections = [
   {
-    title: "Noir Soirée",
+    title: "Noir Première",
     subtitle: "Capsule I · Noir",
-    highlight: "Pré-venda exclusiva",
+    highlight: "Pré-venda privada",
     description:
-      "Vestidos coluna com recortes arquitetônicos, capas em seda e alfaiataria leve para noites intimistas.",
-    image: lookEditorial,
-    objectPosition: "center 30%",
-    alt: "Modelo em vestido preto drapeado da coleção Noir Soirée",
+      "Camisas em seda preta com caimento líquido e alfaiataria em risca de giz para noites de presença absoluta.",
+    image: noirPortrait,
+    objectPosition: "center 25%",
+    alt: "Modelo em camisa preta fluida apoiado em parapeito urbano.",
   },
   {
-    title: "Olive Reverie",
-    subtitle: "Capsule II · Olive",
-    highlight: "Disponível no showroom",
+    title: "Cognac Mirage",
+    subtitle: "Capsule II · Cognac",
+    highlight: "Showroom sob consulta",
     description:
-      "Silhuetas utilitárias em cetim oliva e dourado envelhecido, pensadas para encontros diurnos de verão.",
-    image: lookTailored,
-    objectPosition: "center",
-    alt: "Modelo usando blazer oliva e calça tailleur da coleção Olive Reverie",
+      "Seda acetinada em tom conhaque, lapelas generosas e detalhes dourados que refletem a luz do entardecer.",
+    image: espressoPortrait,
+    objectPosition: "center 35%",
+    alt: "Modelo com camisa marrom acetinada refletindo a luz dourada.",
   },
   {
-    title: "Peach Dawn",
-    subtitle: "Capsule III · Dawn",
-    highlight: "Lista de espera aberta",
+    title: "Sage Vanguard",
+    subtitle: "Capsule III · Sage",
+    highlight: "Lançamento oficial",
     description:
-      "Organza leve, transparências delicadas e acabamentos em couro pêssego para amanheceres luminosos.",
-    image: lookEditorial,
-    objectPosition: "center 68%",
-    alt: "Detalhe de vestido em tons pêssego da coleção Peach Dawn",
+      "Smoking reinterpretado em cetim oliva, botões forrados e proporções alongadas para uma alfaiataria genderless.",
+    image: oliveWalk,
+    objectPosition: "center 40%",
+    alt: "Modelo caminhando diante de um palácio vestindo conjunto verde oliva.",
   },
+  // {
+  //   title: "Blush Aura",
+  //   subtitle: "Capsule IV · Blush",
+  //   highlight: "Lista de espera",
+  //   description:
+  //     "Chemises em pêssego pálido, punhos esculturais e amarrações suaves que evocam poesia matinal.",
+  //   image: peachPortrait,
+  //   objectPosition: "center 35%",
+  //   alt: "Modelo com camisa pêssego com laço lateral junto a uma porta verde.",
+  // },
+  // {
+  //   title: "Verdant Lines",
+  //   subtitle: "Capsule V · Detail",
+  //   highlight: "Sob medida",
+  //   description:
+  //     "Encarnação artesanal da cápsula em verde musgo, costuras milimétricas e botões duplos em foco.",
+  //   image: oliveDetail,
+  //   objectPosition: "center 45%",
+  //   alt: "Close da camisa verde com abotoamento duplo em detalhe.",
+  // },
 ];
 
 const CollectionsSection = () => {
   return (
     <section className="relative overflow-hidden py-24">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-peach-rose/20 via-champagne-cream/40 to-champagne-cream/80" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-petal-sateen/15 via-ivory-haze/40 to-ivory-haze/80" />
       <div className="container relative mx-auto px-6">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-light uppercase tracking-[0.45em] text-muted-foreground">Coleções</p>
@@ -46,8 +69,8 @@ const CollectionsSection = () => {
             <h2 className="text-4xl font-light tracking-tight text-primary md:text-5xl">Coleções Cápsula</h2>
           </div>
           <p className="mt-6 text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-            Uma seleção curada de looks assinados para cada momento do seu calendário — das soirées intimistas
-            aos amanheceres à beira-mar.
+            Uma seleção curada de looks assinados para cada momento do seu calendário — das soirées intimistas aos amanheceres à
+            beira-mar.
           </p>
         </div>
 
@@ -55,7 +78,7 @@ const CollectionsSection = () => {
           {collections.map((collection) => (
             <article
               key={collection.title}
-              className="group relative flex h-full flex-col overflow-hidden border border-border/60 bg-card/70 shadow-elegant backdrop-blur-sm transition-all duration-500 hover:border-olive-sheen/40"
+              className="group relative flex h-full flex-col overflow-hidden border border-border/60 bg-card/70 shadow-elegant backdrop-blur-sm transition-all duration-500 hover:border-sage-velour/40"
             >
               <div className="relative aspect-[3/4] overflow-hidden">
                 <img
@@ -64,18 +87,18 @@ const CollectionsSection = () => {
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   style={{ objectPosition: collection.objectPosition }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-noir-silk/45 via-noir-silk/10 to-transparent transition-opacity duration-500 group-hover:from-noir-silk/55 group-hover:via-noir-silk/20" />
-                <div className="absolute bottom-6 left-6 flex items-center gap-3 text-[0.65rem] font-light uppercase tracking-[0.5em] text-champagne-cream/80">
-                  <span className="h-px w-10 bg-champagne-cream/70" aria-hidden="true" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-velvet/45 via-ink-velvet/10 to-transparent transition-opacity duration-500 group-hover:from-ink-velvet/55 group-hover:via-ink-velvet/20" />
+                <div className="absolute bottom-6 left-6 flex items-center gap-3 text-[0.65rem] font-light uppercase tracking-[0.5em] text-ivory-haze/80">
+                  <span className="h-px w-10 bg-ivory-haze/70" aria-hidden="true" />
                   {collection.subtitle}
                 </div>
               </div>
 
               <div className="flex h-full flex-col gap-4 p-6">
-                <span className="text-xs uppercase tracking-[0.4em] text-olive-sheen">{collection.highlight}</span>
+                <span className="text-xs uppercase tracking-[0.4em] text-gilded-amber">{collection.highlight}</span>
                 <h3 className="text-2xl font-light tracking-tight text-primary serif">{collection.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{collection.description}</p>
-                <div className="mt-auto flex items-center gap-2 pt-2 text-xs font-medium uppercase tracking-[0.45em] text-espresso-suede transition-all duration-500 group-hover:text-primary">
+                <div className="mt-auto flex items-center gap-2 pt-2 text-xs font-medium uppercase tracking-[0.45em] text-cognac-lustre transition-all duration-500 group-hover:text-primary">
                   Ver coleção
                   <span aria-hidden className="transition-transform duration-500 group-hover:translate-x-1">→</span>
                 </div>

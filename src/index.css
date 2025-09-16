@@ -7,42 +7,43 @@
 
 @layer base {
   :root {
-    /* Core Palette - inspired by the attached wardrobe */
-    --noir-silk: 0 0% 8%;
-    --charcoal-pinstripe: 214 10% 26%;
-    --espresso-suede: 23 28% 28%;
-    --olive-sheen: 88 24% 42%;
-    --peach-rose: 22 52% 78%;
-    --champagne-cream: 38 45% 94%;
+    /* Core Palette - inspired by the capsule imagery */
+    --ink-velvet: 0 0% 7%;
+    --graphite-thread: 216 9% 24%;
+    --cognac-lustre: 22 47% 38%;
+    --sage-velour: 88 27% 42%;
+    --petal-sateen: 24 58% 78%;
+    --ivory-haze: 39 45% 94%;
+    --gilded-amber: 35 70% 58%;
 
     /* Semantic Tokens */
-    --background: var(--champagne-cream);
-    --foreground: var(--noir-silk);
+    --background: var(--ivory-haze);
+    --foreground: var(--ink-velvet);
 
-    --card: var(--champagne-cream);
-    --card-foreground: var(--noir-silk);
+    --card: var(--ivory-haze);
+    --card-foreground: var(--ink-velvet);
 
-    --popover: var(--champagne-cream);
-    --popover-foreground: var(--noir-silk);
+    --popover: var(--ivory-haze);
+    --popover-foreground: var(--ink-velvet);
 
-    --primary: var(--noir-silk);
-    --primary-foreground: var(--champagne-cream);
+    --primary: var(--ink-velvet);
+    --primary-foreground: var(--ivory-haze);
 
-    --secondary: var(--peach-rose);
-    --secondary-foreground: var(--noir-silk);
+    --secondary: var(--cognac-lustre);
+    --secondary-foreground: var(--ivory-haze);
 
-    --muted: var(--peach-rose);
-    --muted-foreground: var(--charcoal-pinstripe);
+    --muted: var(--petal-sateen);
+    --muted-foreground: var(--graphite-thread);
 
-    --accent: var(--olive-sheen);
-    --accent-foreground: var(--champagne-cream);
+    --accent: var(--sage-velour);
+    --accent-foreground: var(--ivory-haze);
 
-    --destructive: 8 68% 48%;
-    --destructive-foreground: var(--champagne-cream);
+    --destructive: 5 72% 42%;
+    --destructive-foreground: var(--ivory-haze);
 
-    --border: 32 30% 82%;
-    --input: 32 30% 82%;
-    --ring: var(--olive-sheen);
+    --border: 36 28% 82%;
+    --input: 36 28% 82%;
+    --ring: var(--gilded-amber);
 
     --radius: 0rem;
     
@@ -51,61 +52,52 @@
     --font-sans: 'Inter', sans-serif;
     
     /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, hsl(var(--noir-silk)) 0%, hsl(var(--charcoal-pinstripe)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--champagne-cream)) 0%, hsl(var(--peach-rose)) 100%);
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--ink-velvet)) 0%, hsl(var(--graphite-thread)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--ivory-haze)) 0%, hsl(var(--petal-sateen)) 100%);
 
     /* Shadows */
-    --shadow-elegant: 0 24px 60px -24px hsl(var(--noir-silk) / 0.24);
-    --shadow-luster: 0 0 40px hsl(var(--olive-sheen) / 0.35);
+    --shadow-elegant: 0 24px 60px -24px hsl(var(--ink-velvet) / 0.24);
+    --shadow-luster: 0 0 40px hsl(var(--gilded-amber) / 0.35);
     
     /* Animations */
-    --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-    --sidebar-background: 38 45% 94%;
-
-    --sidebar-foreground: 0 0% 10%;
-
-    --sidebar-primary: 23 28% 28%;
-
-    --sidebar-primary-foreground: 38 45% 94%;
-
-    --sidebar-accent: 22 52% 78%;
-
-    --sidebar-accent-foreground: 0 0% 10%;
-
-    --sidebar-border: 32 30% 82%;
-
-    --sidebar-ring: 88 24% 42%;
+        --sidebar-background: 39 45% 94%;
+    --sidebar-foreground: 0 0% 12%;
+    --sidebar-primary: 22 47% 38%;
+    --sidebar-primary-foreground: 39 45% 94%;
+    --sidebar-accent: 24 58% 78%;
+    --sidebar-accent-foreground: 0 0% 12%;
+    --sidebar-border: 36 28% 82%;
+    --sidebar-ring: 35 70% 58%;
   }
 
   .dark {
-    --background: var(--noir-silk);
-    --foreground: var(--champagne-cream);
+    --background: var(--ink-velvet);
+    --foreground: var(--ivory-haze);
 
-    --card: var(--noir-silk);
-    --card-foreground: var(--champagne-cream);
+    --card: var(--ink-velvet);
+    --card-foreground: var(--ivory-haze);
 
-    --popover: var(--noir-silk);
-    --popover-foreground: var(--champagne-cream);
+    --popover: var(--ink-velvet);
+    --popover-foreground: var(--ivory-haze);
 
-    --primary: var(--champagne-cream);
-    --primary-foreground: var(--noir-silk);
+    --primary: var(--ivory-haze);
+    --primary-foreground: var(--ink-velvet);
 
-    --secondary: var(--espresso-suede);
-    --secondary-foreground: var(--champagne-cream);
+    --secondary: var(--graphite-thread);
+    --secondary-foreground: var(--ivory-haze);
 
-    --muted: var(--charcoal-pinstripe);
-    --muted-foreground: var(--peach-rose);
+    --muted: var(--graphite-thread);
+    --muted-foreground: var(--petal-sateen);
 
-    --accent: var(--olive-sheen);
-    --accent-foreground: var(--champagne-cream);
+    --accent: var(--sage-velour);
+    --accent-foreground: var(--ivory-haze);
 
-    --destructive: 8 62% 38%;
-    --destructive-foreground: var(--champagne-cream);
+    --destructive: 4 65% 38%;
+    --destructive-foreground: var(--ivory-haze);
 
-    --border: var(--charcoal-pinstripe);
-    --input: var(--charcoal-pinstripe);
-    --ring: var(--olive-sheen);
+    --border: var(--graphite-thread);
+    --input: var(--graphite-thread);
+    --ring: var(--gilded-amber);
   }
 }
 
@@ -148,7 +140,7 @@
   }
 
   .hero-text {
-    @apply text-4xl md:text-6xl lg:text-7xl;
+    @apply text-2xl md:text-3xl lg:text-4xl;
     @apply font-light tracking-tight leading-tight;
     @apply serif;
   }

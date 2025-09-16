@@ -14,13 +14,14 @@ export default {
     },
     extend: {
       colors: {
-        'noir-silk': 'hsl(var(--noir-silk))',
-        'champagne-cream': 'hsl(var(--champagne-cream))',
-        'peach-rose': 'hsl(var(--peach-rose))',
-        'olive-sheen': 'hsl(var(--olive-sheen))',
-        'espresso-suede': 'hsl(var(--espresso-suede))',
-        'charcoal-pinstripe': 'hsl(var(--charcoal-pinstripe))',
-        
+        'ink-velvet': 'hsl(var(--ink-velvet))',
+        'ivory-haze': 'hsl(var(--ivory-haze))',
+        'petal-sateen': 'hsl(var(--petal-sateen))',
+        'sage-velour': 'hsl(var(--sage-velour))',
+        'cognac-lustre': 'hsl(var(--cognac-lustre))',
+        'graphite-thread': 'hsl(var(--graphite-thread))',
+        'gilded-amber': 'hsl(var(--gilded-amber))',
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,16 +57,16 @@ export default {
         },
       },
       fontFamily: {
-        'serif': ['var(--font-serif)'],
-        'sans': ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
+        sans: ['var(--font-sans)'],
       },
       backgroundImage: {
         'gradient-luxury': 'var(--gradient-luxury)',
         'gradient-subtle': 'var(--gradient-subtle)',
       },
       boxShadow: {
-        'elegant': 'var(--shadow-elegant)',
-        'luster': 'var(--shadow-luster)',
+        elegant: 'var(--shadow-elegant)',
+        luster: 'var(--shadow-luster)',
       },
       borderRadius: {
         lg: "var(--radius)",
