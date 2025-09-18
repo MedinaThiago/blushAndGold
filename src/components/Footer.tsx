@@ -8,40 +8,27 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="serif text-2xl font-light mb-6">
-              Editorial Luxo
+              Igor Fagundes Collection
             </h3>
             <p className="text-sm font-light leading-relaxed text-ivory-haze/80 mb-6">
-              Criamos peças atemporais que transcendem tendências. Cada coleção é uma celebração da elegância contemporânea.
+              We create timeless pieces that transcend trends. Each collection is a celebration of contemporary elegance.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="p-2 hover:text-sage-velour transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="p-2 hover:text-sage-velour transition-colors">
-                <Mail size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Links */}
           <div>
             <h4 className="serif text-lg font-light mb-6">
-              Navegação
+              Navigation
             </h4>
             <ul className="space-y-3 text-sm font-light">
               <li>
                 <a href="#" className="p-2 hover:text-sage-velour transition-colors">
-                  Coleções
+                  News
                 </a>
               </li>
               <li>
-                <a href="#" className="p-2 hover:text-sage-velour transition-colors">
-                  Editorial
-                </a>
-              </li>
-              <li>
-                <a href="#" className="p-2 hover:text-sage-velour transition-colors">
-                  Contato
+                <a href="#collections" className="p-2 hover:text-sage-velour transition-colors">
+                  Collections
                 </a>
               </li>
             </ul>
@@ -53,32 +40,34 @@ const Footer = () => {
               Contato
             </h4>
             <div className="space-y-4 text-sm font-light">
-              <div className="flex items-start space-x-3">
-                <MapPin size={16} className="mt-1 text-sage-velour" />
+              <a
+                href="https://www.instagram.com/if_mycollection?igsh=MTYzOTdsdnA1eThodA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start space-x-3 hover:text-sage-velour transition-colors cursor-pointer"
+              >
+                <Instagram size={20} />
                 <div>
-                  <p>Rua Augusta, 2000</p>
-                  <p>São Paulo, SP 01412-100</p>
+                  <p>Igor Fagundes Collection</p>
                 </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} className="mt-1 text-sage-velour" />
-                <p>contato@editorialluxo.com</p>
-              </div>
+              </a>
+              <a
+                href="https://www.instagram.com/if_mycollection?igsh=MTYzOTdsdnA1eThodA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start space-x-3 hover:text-sage-velour transition-colors cursor-pointer"
+              >                <Mail size={20} />
+                <div>
+                  <p>contato@editorialluxo.com</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-ivory-haze/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs font-light text-champagne-cream/60">
-            <p>&copy; 2024 Editorial Luxo. Todos os direitos reservados.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-sage-velour transition-colors">
-                Política de Privacidade
-              </a>
-              <a href="#" className="hover:text-sage-velour transition-colors">
-                Termos de Uso
-              </a>
-            </div>
+            <p>&copy; 2025 Igor Fagundes Collection. All rights reserved.</p>
           </div>
         </div>
       </div>

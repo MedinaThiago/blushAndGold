@@ -18,17 +18,17 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="serif text-2xl font-light tracking-wide">
-              IF BRANDS
+              Igor Fagundes Collection
             </h1>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-sm font-light tracking-wide hover:text-accent transition-colors">
-              Novidades
+              News
             </a>
             <a href="#collections" onClick={handleScrollToCollections} className="text-sm font-light tracking-wide hover:text-accent transition-colors">
-              Coleções
+              Collections
             </a>
           </nav>
         </div>

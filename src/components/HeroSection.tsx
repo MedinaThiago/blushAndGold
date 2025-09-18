@@ -8,29 +8,26 @@ const HeroSection = () => {
           {/* Content */}
           <div className="text-center lg:text-left elegant-fade">
             <div className="mb-6">
-              <div className="luxury-line">
+              <div>
                 <h1 className="hero-text mb-6 text-balance">
-                  A Essência da Minha Primeira Coleção Cápsula
+                  The Essence of My Capsule Collection
                 </h1>
               </div>
             </div>
 
             <div className="mb-8 max-w-lg mx-auto lg:mx-0">
               <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                Sempre acreditei que a moda é mais do que vestir: é identidade, expressão e presença. Dessa visão nasceu meu desejo de criar algo verdadeiramente autoral peças que traduzem poesia, delicadeza e elegância em cada detalhe.
+                I have always seen fashion as more than clothing: it is identity, presence, and the art of expression. From this vision I created my first capsule collection, a unique and limited edition conceived as a personal statement of elegance and individuality.              </p>
+
+              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
+                I chose the shirt as the centerpiece: timeless and versatile, it shifts between the feminine and the masculine, becoming naturally genderless. In satin fabrics, each piece carries poetry and subtle luxury, designed to feel both classic and contemporary.              </p>
+
+              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
+                This is an exclusive, one-time launch, produced in limited numbers to preserve the experience of owning something truly rare and personal.
               </p>
 
               <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                Assim surgiu minha primeira coleção cápsula. Camisas em tecidos acetinados, que revelam movimento e luxo em cada gesto, foram o ponto de partida dessa criação.
-              </p>
-
-              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                Escolhi as camisas porque carregam uma força atemporal: clássicas e versáteis, transitam entre o feminino e o masculino, tornando-se peças genderless. Produzidas em número limitado, são exclusivas, reinterpretadas com fluidez e contemporaneidade.
-              </p>
-
-              <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                Cada criação é um reflexo da minha visão: moda como arte, manifesto e celebração da individualidade.
-              </p>
+                For further details or to inquire about the collection, please get in touch directly because true exclusivity deserves a private service.              </p>
             </div>
           </div>
 

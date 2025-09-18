@@ -7,31 +7,31 @@ import oliveDetail from "@/assets/camisa_verde_zoom.jpg";
 
 const collections = [
   {
-    title: "Rhapsodie",
-    subtitle: "IF BRANDS · Rhapsodie",
-    highlight: "Lançamento oficial",
+    title: "Timeless  Sophistication",
+    subtitle: "Timeless  Sophistication",
+    highlight: "Igor Fagundes collection",
     description:
-      "Camisas atemporais em edição limitada, criadas para transitar entre o feminino e o masculino com sofisticação, fluidez e elegância.",
+      "Timeless shirts in a limited edition, crafted to flow effortlessly between the feminine and the masculine a statement of sophistication, fluidity, and elegance.",
     image: peachPortrait,
     objectPosition: "center 25%",
     alt: "Modelo em camisa preta fluida apoiado em parapeito urbano.",
   },
   {
-    title: "Rhapsodie",
-    subtitle: "IF BRANDS · Rhapsodie",
-    highlight: "Lançamento oficial",
+    title: "Poetry in Motion",
+    subtitle: "Poetry in Motion",
+    highlight: "Igor Fagundes collection",
     description:
-      "Peças exclusivas que revelam movimento e delicadeza, combinando poesia e modernidade em cada detalhe, para quem entende que vestir-se é também um ato de expressão artística.",
+      "Exclusive pieces that capture movement and delicacy, blending poetry with modernity in every detail , for those who see dressing as an act of artistic expression.",
     image: espressoPortrait,
     objectPosition: "center 35%",
     alt: "Modelo com camisa marrom acetinada refletindo a luz dourada.",
   },
   {
-    title: "Rhapsodie",
-    subtitle: "IF BRANDS · Rhapsodie",
-    highlight: "Lançamento oficial",
+    title: "The Art of Individuality",
+    subtitle: "The Art of Individuality",
+    highlight: "Igor Fagundes collection",
     description:
-      "Uma coleção cápsula autoral, criada em número limitado, que celebra a individualidade e traduz a essência da moda como arte, manifesto e afirmação estética.",
+      "An original capsule collection, created in limited numbers, celebrating individuality and embodying fashion as art, manifesto, and aesthetic statement.",
     image: oliveDetail,
     objectPosition: "center 40%",
     alt: "Modelo caminhando diante de um palácio vestindo conjunto verde oliva.",
@@ -44,13 +44,12 @@ const CollectionsSection = () => {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-petal-sateen/15 via-ivory-haze/40 to-ivory-haze/80" />
       <div className="container relative mx-auto px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-light uppercase tracking-[0.45em] text-muted-foreground">Coleções</p>
+          <p className="text-xs font-light uppercase tracking-[0.45em] text-muted-foreground">Collections</p>
           <div className="luxury-line mt-6 inline-block">
-            <h2 className="text-4xl font-light tracking-tight text-primary md:text-5xl">Coleções Cápsula</h2>
+            <h2 className="text-4xl font-light tracking-tight text-primary md:text-5xl">Capsule Collections</h2>
           </div>
           <p className="mt-6 text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-            Uma seleção curada de looks assinados para cada momento do seu calendário — das soirées intimistas aos amanheceres à
-            beira-mar.
+            A curated selection of signature looks for every moment on your calendar
           </p>
         </div>
 
@@ -89,7 +88,7 @@ const CollectionsSection = () => {
             size="lg"
             className="uppercase tracking-[0.4em] text-xs font-light md:text-sm"
           >
-            Ver lookbook completo
+            See complete lookbook
           </LuxuryButton>
         </div>
       </div>
