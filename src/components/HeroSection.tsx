@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import posterImage from "@/assets/camisa_preta.jpg";
-import heroVideo from "@/assets/video_camisa_preta.mp4";
+import heroVideo from "@/assets/video_camisa_preta.h264?url";
 
 const HeroSection = () => {
   return (
@@ -118,7 +118,7 @@ const VideoShowcase = () => {
             aria-label="Video showcasing the capsule collection shirt"
             disablePictureInPicture
           >
-            <source src={heroVideo} type="video/mp4" />
+            <source src={heroVideo} type="video/h264" />
             Your browser does not support the video tag.
           </video>
         )}
