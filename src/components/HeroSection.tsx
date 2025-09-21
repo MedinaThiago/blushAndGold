@@ -1,4 +1,7 @@
-import video from "@/assets/video_camisa_preta.mp4";
+import { useEffect, useRef, useState } from "react";
+
+import posterImage from "@/assets/camisa_preta.jpg";
+import heroVideo from "@/assets/video_camisa_preta.mp4";
 
 const HeroSection = () => {
   return (
@@ -31,25 +34,99 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="relative elegant-fade">
-            <div className="relative overflow-hidden">
-              <video
-                src={video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-auto object-cover luxury-hover max-w-[360px] lg:max-w-[480px] mx-auto"
-                style={{ aspectRatio: "3/5" }}
-              />
-
-              {/* Subtle overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-noir-silk/10 to-transparent pointer-events-none" />
-            </div>
-          </div>
+          <VideoShowcase />
         </div>
       </div>
     </section>
+  );
+};
+
+const VideoShowcase = () => {
+  const [isVideoReady, setIsVideoReady] = useState(false);
+  const [shouldFallback, setShouldFallback] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    if (!videoElement || shouldFallback) {
+      return;
+    }
+
+    const attemptPlay = () => {
+      const playPromise = videoElement.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          videoElement.muted = true;
+          videoElement.setAttribute("playsinline", "true");
+
+          videoElement.play().catch(() => {
+            setShouldFallback(true);
+          });
+        });
+      }
+    };
+
+    if (videoElement.readyState >= 2) {
+      attemptPlay();
+    }
+
+    const handleLoadedMetadata = () => {
+      attemptPlay();
+    };
+
+    videoElement.addEventListener("loadedmetadata", handleLoadedMetadata);
+
+    return () => {
+      videoElement.removeEventListener("loadedmetadata", handleLoadedMetadata);
+    };
+  }, [shouldFallback]);
+
+  const handleCanPlay = () => {
+    setIsVideoReady(true);
+  };
+
+  const handleError = () => {
+    setShouldFallback(true);
+  };
+
+  return (
+    <div className="relative elegant-fade">
+      <div className="relative overflow-hidden">
+        {shouldFallback ? (
+          <img
+            src={posterImage}
+            alt="Showcase of the capsule collection shirt"
+            className="w-full h-auto object-cover luxury-hover max-w-[360px] lg:max-w-[480px] mx-auto"
+            style={{ aspectRatio: "3/5" }}
+            loading="lazy"
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster={posterImage}
+            className={`w-full h-auto object-cover luxury-hover max-w-[360px] lg:max-w-[480px] mx-auto transition-opacity duration-700 ${isVideoReady ? "opacity-100" : "opacity-0"}`}
+            style={{ aspectRatio: "3/5" }}
+            onCanPlay={handleCanPlay}
+            onError={handleError}
+            aria-label="Video showcasing the capsule collection shirt"
+            disablePictureInPicture
+          >
+            <source src={heroVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+
+        {/* Subtle overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-noir-silk/10 to-transparent pointer-events-none" />
+      </div>
+    </div>
   );
 };
 
