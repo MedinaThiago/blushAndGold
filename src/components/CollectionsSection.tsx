@@ -83,16 +83,22 @@ const CollectionsSection = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <LuxuryButton
-            variant="outline"
-            size="lg"
-            className="uppercase tracking-[0.4em] text-xs font-light md:text-sm"
+          <a
+            href={`https://wa.me/34663193100?text=${encodeURIComponent("Olá, tenho interesse na suíte. Pode enviar mais detalhes sobre disponibilidade e preços, por favor?")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Entrar em contato via WhatsApp"
           >
-            See complete lookbook
-          </LuxuryButton>
+            <LuxuryButton
+              variant="outline"
+              size="lg"
+              className="uppercase tracking-[0.4em] text-xs font-light md:text-sm">
+              See complete lookbook
+            </LuxuryButton>
+          </a>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 

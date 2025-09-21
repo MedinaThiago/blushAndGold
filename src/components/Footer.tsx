@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="serif text-2xl font-light mb-6">
-              Igor Fagundes Collection
+              IF Collection
             </h3>
             <p className="text-sm font-light leading-relaxed text-ivory-haze/80 mb-6">
               We create timeless pieces that transcend trends. Each collection is a celebration of contemporary elegance.
@@ -48,17 +48,17 @@ const Footer = () => {
               >
                 <Instagram size={20} />
                 <div>
-                  <p>Igor Fagundes Collection</p>
+                  <p>IF Collection</p>
                 </div>
               </a>
               <a
-                href="https://www.instagram.com/if_mycollection?igsh=MTYzOTdsdnA1eThodA=="
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:Ifagundes@ifexclusivecollection.com"
                 className="flex items-start space-x-3 hover:text-sage-velour transition-colors cursor-pointer"
-              >                <Mail size={20} />
+                aria-label="Enviar email para Ifagundes@ifexclusivecollection.com"
+              >
+                <Mail size={20} />
                 <div>
-                  <p>contato@editorialluxo.com</p>
+                  <p>Ifagundes@ifexclusivecollection.com</p>
                 </div>
               </a>
             </div>
@@ -67,7 +67,7 @@ const Footer = () => {
 
         <div className="border-t border-ivory-haze/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-xs font-light text-champagne-cream/60">
-            <p>&copy; 2025 Igor Fagundes Collection. All rights reserved.</p>
+            <p>&copy; 2025 IF Collection. All rights reserved.</p>
           </div>
         </div>
       </div>
