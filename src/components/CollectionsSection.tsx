@@ -84,7 +84,7 @@ const CollectionsSection = () => {
 
         <div className="mt-12 flex justify-center">
           <a
-            href={`https://wa.me/34663193100?text=${encodeURIComponent("Olá, tenho interesse na suíte. Pode enviar mais detalhes sobre disponibilidade e preços, por favor?")}`}
+            href={`https://wa.me/34663193100?text=${encodeURIComponent("Hello, I would like to know more about If Collections.")}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Entrar em contato via WhatsApp"
