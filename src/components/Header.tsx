@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Menu, X, Search, User, ShoppingBag } from "lucide-react";
-import WhatsAppButton from "./WhatsAppButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,10 +49,6 @@ const Header = () => {
           </nav>
         )}
       </div>
-      <WhatsAppButton
-        phone="34663193100"
-        message="Olá, tenho interesse na suíte. Pode enviar mais detalhes sobre disponibilidade e preços, por favor?"
-      />
     </header>
   );
 };
