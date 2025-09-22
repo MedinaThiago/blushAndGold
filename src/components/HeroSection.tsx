@@ -6,18 +6,19 @@ const HeroSection = () => {
   const [failedAutoplay, setFailedAutoplay] = useState(false);
 
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
+    const video = videoRef.current;
+    if (!video) return;
 
     // iOS/Safari: garanta inline + mudo antes do play
-    v.muted = true;
-    (v as any).defaultMuted = true;
-    v.playsInline = true;
-    v.setAttribute("webkit-playsinline", "true");
+    const enhancedVideo = video as HTMLVideoElement & { defaultMuted?: boolean };
+    enhancedVideo.muted = true;
+    enhancedVideo.defaultMuted = true;
+    enhancedVideo.playsInline = true;
+    enhancedVideo.setAttribute("webkit-playsinline", "true");
 
-    const p = v.play?.();
-    if (p && typeof p.catch === "function") {
-      p.catch(() => setFailedAutoplay(true)); // fallback se bloquear autoplay
+    const playPromise = enhancedVideo.play?.();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => setFailedAutoplay(true)); // fallback se bloquear autoplay
     }
   }, []);
 
