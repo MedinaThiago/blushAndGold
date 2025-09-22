@@ -1,9 +1,5 @@
 import { LuxuryButton } from "./LuxuryButton";
-import noirPortrait from "@/assets/camisa_preta.jpg";
-import espressoPortrait from "@/assets/camisa_marrom.jpg";
-import oliveWalk from "@/assets/camisa_verde.jpg";
-import peachPortrait from "@/assets/camisa_rosa.jpg";
-import oliveDetail from "@/assets/camisa_verde_zoom.jpg";
+
 
 const collections = [
   {
@@ -12,7 +8,7 @@ const collections = [
     highlight: "Igor Fagundes collection",
     description:
       "Timeless shirts in a limited edition, crafted to flow effortlessly between the feminine and the masculine a statement of sophistication, fluidity, and elegance.",
-    image: peachPortrait,
+    image: "https://ifexclusivecollection.com/images/camisa_rosa.webp",
     objectPosition: "center 25%",
     alt: "Modelo em camisa preta fluida apoiado em parapeito urbano.",
   },
@@ -22,7 +18,7 @@ const collections = [
     highlight: "Igor Fagundes collection",
     description:
       "Exclusive pieces that capture movement and delicacy, blending poetry with modernity in every detail , for those who see dressing as an act of artistic expression.",
-    image: espressoPortrait,
+    image: "https://ifexclusivecollection.com/images/camisa_marrom.webp",
     objectPosition: "center 35%",
     alt: "Modelo com camisa marrom acetinada refletindo a luz dourada.",
   },
@@ -32,7 +28,7 @@ const collections = [
     highlight: "Igor Fagundes collection",
     description:
       "An original capsule collection, created in limited numbers, celebrating individuality and embodying fashion as art, manifesto, and aesthetic statement.",
-    image: oliveDetail,
+    image: "https://ifexclusivecollection.com/images/camisa_verde_zoom.webp",
     objectPosition: "center 40%",
     alt: "Modelo caminhando diante de um palácio vestindo conjunto verde oliva.",
   },
@@ -63,9 +59,12 @@ const CollectionsSection = () => {
                 <img
                   src={collection.image}
                   alt={collection.alt}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                   style={{ objectPosition: collection.objectPosition }}
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-velvet/45 via-ink-velvet/10 to-transparent transition-opacity duration-500 group-hover:from-ink-velvet/55 group-hover:via-ink-velvet/20" />
                 <div className="absolute bottom-6 left-6 flex items-center gap-3 text-[0.65rem] font-light uppercase tracking-[0.5em] text-ivory-haze/80">
                   <span className="h-px w-10 bg-ivory-haze/70" aria-hidden="true" />

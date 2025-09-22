@@ -10,6 +10,13 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleScrollToContact = (e: any) => {
+    e.preventDefault();
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
@@ -29,6 +36,9 @@ const Header = () => {
             <a href="#collections" onClick={handleScrollToCollections} className="text-sm font-light tracking-wide hover:text-accent transition-colors">
               Collections
             </a>
+            <a href="#contact" onClick={handleScrollToContact} className="text-sm font-light tracking-wide hover:text-accent transition-colors">
+              Contact
+            </a>
           </nav>
         </div>
 
@@ -37,13 +47,13 @@ const Header = () => {
           <nav className="md:hidden mt-6 pb-6 border-t border-border pt-6">
             <div className="flex flex-col space-y-4">
               <a href="#" className="text-base font-light tracking-wide hover:text-accent transition-colors">
-                Novidades
+                News
               </a>
               <a href="#collections" onClick={handleScrollToCollections} className="text-base font-light tracking-wide hover:text-accent transition-colors">
-                Coleções
+                Collections
               </a>
-              <a href="#" className="text-base font-light tracking-wide hover:text-accent transition-colors">
-                Editorial
+              <a href="#contact" onClick={handleScrollToContact} className="text-base font-light tracking-wide hover:text-accent transition-colors">
+                Contact
               </a>
             </div>
           </nav>
