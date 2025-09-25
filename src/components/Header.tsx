@@ -17,6 +17,14 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleScrollToHero = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const el = document.getElementById("hero");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
+  };
+
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4">
@@ -77,7 +85,7 @@ const Header = () => {
         {isMenuOpen && (
           <nav id="mobile-navigation" className="md:hidden mt-6 pb-6 border-t border-border pt-6">
             <div className="flex flex-col space-y-4">
-              <a href="#" className="text-base font-light tracking-wide hover:text-accent transition-colors">
+              <a href="#" onClick={handleScrollToHero} className="text-base font-light tracking-wide hover:text-accent transition-colors">
                 News
               </a>
               <a href="#collections" onClick={handleScrollToCollections} className="text-base font-light tracking-wide hover:text-accent transition-colors">
