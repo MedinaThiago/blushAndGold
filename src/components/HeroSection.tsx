@@ -33,13 +33,13 @@ const HeroSection = () => {
             </h1>
             <div className="mb-8 max-w-lg mx-auto lg:mx-0">
               <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                I have always seen fashion as more than clothing: it is identity, presence, and the art of expression. From this vision I created my first capsule collection, a unique and limited edition conceived as a personal statement of elegance and individuality.
+                Fashion has always been more than clothing to me it is identity, presence, and the purest form of expression. From this vision emerges my first capsule collection: a rare, limited edition, conceived as a personal statement of elegance and individuality.
               </p>
               <p className="text-lg font-light leading-relaxed text-muted-foreground mb-6">
-                I chose the shirt as the centerpiece: timeless and versatile, it shifts between the feminine and the masculine, becoming naturally genderless. In satin fabrics, each piece carries poetry and subtle luxury, designed to feel both classic and contemporary.
+                At its heart stands the shirt timeless, versatile, and effortlessly shifting between the feminine and the masculine, embracing a naturally genderless spirit. Crafted in satin of carefully sourced quality, each piece carries poetry in its lines: subtle luxury designed to feel at once classic and contemporary.
               </p>
               <p className="text-lg font-light leading-relaxed text-muted-foreground">
-                This is an exclusive, one-time launch, produced in limited numbers to preserve the experience of owning something truly rare and personal.
+                This is an exclusive, one-time release, produced in limited numbers to preserve the privilege of owning something truly rare, refined, and deeply personal.
               </p>
             </div>
           </div>
